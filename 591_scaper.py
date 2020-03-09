@@ -95,11 +95,7 @@ date=str(now.year)+str(now.month)+str(now.day)
 conn = MongoClient("mongodb://127.0.0.1") 
 collection = db[date]
 
-# collection.insert_many(data)
-
-print(collection.find().count())
-# for doc in collection.find({'$and':[{'regionname':'台北市'},{'name':{'$regex':"^王"}}]}):
-#     print(doc)
+collection.insert_many(data)
 
 conn.close()
         
